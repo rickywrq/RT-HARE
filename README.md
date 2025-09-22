@@ -2,11 +2,19 @@
 
 ## Introduction
 
-This repository contains the source code and testbed setup instructions for 
+<div align="center">
 
-Ruiqi Wang, Zichen Wang, Peiqi Gao, Mingzhen Li, Jaehwan Jeong, Yihang Xu, Yejin Lee, Carolyn M. Baum, Lisa Tabor Connor, Chenyang Lu. **"Real-Time Video-based Human Action Recognition on Embedded Platforms."** 
+    
+  <img src="assets/rt_hare_fig.png" width=50% height=50%>
+  
 
-Accepted to appear in ESWEEK 2025.
+</div>
+
+This repository contains the source training code for:
+
+Ruiqi Wang, Zichen Wang, Peiqi Gao, Mingzhen Li, Jaehwan Jeong, Yihang Xu, Yejin Lee, Carolyn M. Baum, Lisa Tabor Connor, Chenyang Lu. **"Real-Time Video-based Human Action Recognition on Embedded Platforms."** ACM Transactions on Embedded Computing Systems (2025) & EMSOFT '25. [[Paper]](https://doi.org/10.1145/3761795)
+
+For questions, please contact Ruiqi Wang and Peiqi Gao.
 
 
 ## Breakdown of code repositories
@@ -42,8 +50,8 @@ conda activate imfe
 ```
 
 ### Option 2: Docker:
-    
-The code can be run in pytorch's offical docker containers, e.g.:
+
+The code can be run in pytorch's pre-built docker containers, e.g.:
 ```
 pytorch/pytorch:2.1.2-cuda11.8-cudnn8-devel
 pytorch/pytorch:2.2.2-cuda12.1-cudnn8-devel
@@ -230,27 +238,25 @@ python imfe_train_distributed.py 2 1 --batch_size 2 --save_path ./checkpoint --d
 
 ## Citation
 ```
-@article{wang2024real,
-  title={Real-Time Human Action Recognition on Embedded Platforms},
-  author={Ruiqi Wang and Zichen Wang and Peiqi Gao and Mingzhen Li and Jaehwan Jeong and Yihang Xu and Yejin Lee and Carolyn M. Baum and Lisa Tabor Connor and Chenyang Lu},
-  journal={arXiv preprint arXiv:2409.05662},
-  year={2024}
+@article{10.1145/3761795,
+author = {Wang, Ruiqi and Wang, Zichen and Gao, Peiqi and Li, Mingzhen and Jeong, Jaehwan and Xu, Yihang and Lee, Yejin and Baum, Carolyn and Connor, Lisa and Lu, Chenyang},
+title = {Real-Time Video-Based Human Action Recognition on Embedded Platforms},
+year = {2025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+issn = {1539-9087},
+url = {https://doi.org/10.1145/3761795},
+doi = {10.1145/3761795},
+journal = {ACM Trans. Embed. Comput. Syst.},
+month = aug,
+keywords = {Human Action Recognition, Embedded and Real-time Systems, Machine Learning Systems, Computer Vision, Latency Optimization}
 }
 ```
 
 ## Related Work
 
-**This work is closely related to our embedded systems papers:**
-
+**This work is closely related to our projects:**
+* The Smart Kitchen project.
 * R. Wang, H. Liu, J. Qiu, M. Xu, R. Guerin, C. Lu, ["Progressive Neural Compression for Adaptive Image Offloading under Timing Constraints,"](https://doi.org/10.1109/RTSS59052.2023.00020) IEEE Real-Time Systems Symposium (RTSS'23), December 2023.  
 [[paper](https://doi.org/10.1109/RTSS59052.2023.00020)] 
 [[code](https://github.com/rickywrq/Progressive-Neural-Compression)]
-
-
-* Qiu, J., Wang, R., Hu, B., Guérin, R., & Lu, C. (2024). **"Optimizing Edge Offloading Decisions for Object Detection."** 2024 IEEE/ACM Symposium on Edge Computing (SEC).
-[[paper]](https://arxiv.org/abs/2410.18919)
-[[code]](https://github.com/qiujiaming315/edgeml-object-detection/)
-
-* Qiu, J., Wang, R., Chakrabarti, A., Guérin, R., & Lu, C. (2022). **"Adaptive Edge Offloading for Image Classification Under Rate Limit."** IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 41(11), 3886-3897.
-[[paper]](https://ieeexplore.ieee.org/document/9852802)
-[[code]](https://github.com/qiujiaming315/edgeml-dqn)
