@@ -124,6 +124,9 @@ Extract and modify `rgb_path, feat_path` accordingly.
 #### Option 2: Extract features from scratch.
 
 TODO
+We use [TSN feature extraction](https://github.com/open-mmlab/mmaction2/blob/v0.24.1/tools/data/activitynet/tsn_feature_extraction.py) to extract the features from both RGB and Flow frames.
+
+We use the [checkpoints](https://github.com/open-mmlab/mmaction2/tree/v0.24.1/configs/recognition/tsn#activitynet-v13) pretrained from ActivityNet to extract the RGB and Flow features.
 
 ### Prepare IMFE Checkpoints
 
